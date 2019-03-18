@@ -1,4 +1,3 @@
-#
 [CmdletBinding()]
 
     Param
@@ -6,11 +5,11 @@
      [Parameter(Mandatory=$true)]
      [String]
      $ExternalNetwork,
+
      [Parameter(Mandatory=$true)]
      [String]
      $ExternalDomainFqdn
     )
-
 
 function Test-IpAndSubnetInput
 {
@@ -71,7 +70,7 @@ if (!(Test-Path $DeploymentScriptPath))
     {
     . C:\CloudDeployment\Setup\BootstrapAzureStackDeployment.ps1
     }
-#OLD $configfile = 'C:\CloudDeployment\Configuration\OneNodeCustomerConfigTemplate.xml'
+
 $parameterfile = 'C:\CloudDeployment\Configuration\Parameters\OneNodeDeploymentParameters.xml'
 
 $ExternalNetwork | Test-IpAndSubnetInput
@@ -84,7 +83,6 @@ if ($testip )
         throw ("External Subnet must be different from server network")
     }
 
-#OLD [xml]$configxml=Get-Content($configfile)
 [xml]$parameterxml=Get-Content($parameterfile)
 
 # SET NETWORKS INFO
