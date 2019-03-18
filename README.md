@@ -12,8 +12,8 @@ Usage:
 
 
 EXAMPLE OF HOW TO USE THE SCRIPT
- Set-Location "C:\CloudDeployment\Setup"
- .\UpdateNetworkSettingsBeforeSetup.ps1 -ExternalNetwork 56.56.56.0/24 -ExternalDomainFqdn "ASDK1.MyCompany.com"
+Set-Location "C:\CloudDeployment\Setup"
+.\UpdateNetworkSettingsBeforeSetup.ps1 -ExternalNetwork 56.56.56.0/24 -ExternalDomainFqdn "ASDK1.MyCompany.com"
  
  This will result in the ASDK beeing published on the 56.56.56.0/24 network and you will find the portal at https://portal.local.asdk1.mycompany.com
  
